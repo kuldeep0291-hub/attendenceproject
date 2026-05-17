@@ -32,7 +32,6 @@ htmlcov/
 # ─── Node / Frontend ──────────────────────────────────────────────────────────
 node_modules/
 frontend/node_modules/
-frontend/dist/
 frontend/.vite/
 *.local
 npm-debug.log*
@@ -61,3 +60,4 @@ desktop.ini
 # ─── Keep these ───────────────────────────────────────────────────────────────
 !.env.example
 !frontend/public/models/
+!frontend/public/models/*.bin
