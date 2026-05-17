@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans;
+  }
+}
+
+@layer utilities {
+  .navy { background-color: #0a1628; }
+  .navy-card {
+    background: rgba(255,255,255,0.97);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 24px rgba(10,22,40,0.10);
+  }
+  .btn-navy {
+    @apply bg-[#0a1628] hover:bg-[#162444] active:scale-95 text-white font-bold py-3 px-6 rounded-2xl transition-all duration-200 shadow-md;
+  }
+  .btn-outline {
+    @apply border-2 border-[#0a1628] text-[#0a1628] hover:bg-[#0a1628] hover:text-white font-bold py-3 px-6 rounded-2xl transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#0a1628] focus:ring-2 focus:ring-[#0a1628]/20 transition;
+  }
+  .card {
+    @apply bg-white border border-slate-200 rounded-2xl shadow-sm;
+  }
+  .page-wrap {
+    @apply min-h-screen bg-slate-50;
+  }
+}
+
+@keyframes confetti-fall {
+  0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+.animate-confetti { animation: confetti-fall 2.5s ease-in forwards; }
+
+@keyframes slide-up {
+  from { transform: translate(-50%, 20px); opacity: 0; }
+  to   { transform: translate(-50%, 0);    opacity: 1; }
+}
+.animate-slide-up { animation: slide-up 0.25s ease-out forwards; }
